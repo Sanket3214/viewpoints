@@ -20,11 +20,10 @@ jobs:
       run: dir ViewpointRenamePlugin-main -Recurse
 
     - name: Build
-      run: dir ViewpointRenamePlugin-main -Recurse
+      run: dotnet build ViewpointRenamePlugin-main/PRYANIK_Plugin.csproj --configuration Release
 
     - name: Upload DLL
       uses: actions/upload-artifact@v4
       with:
-        name: pryanik-dll
-        path: |
-          **/bin/Release/*.dll
+        name: Plugin-DLL
+        path: ViewpointRenamePlugin-main/bin/Release/**/*.dll
