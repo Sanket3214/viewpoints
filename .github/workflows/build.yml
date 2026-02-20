@@ -17,10 +17,10 @@ jobs:
         dotnet-version: 6.0.x
 
     - name: Restore
-      run: dotnet restore
+      run: dotnet restore PRYANIK_Plugin.sln
 
     - name: Build
-      run: dotnet build --configuration Release
+      run: dotnet build PRYANIK_Plugin.sln --configuration Release
 
     - name: Upload DLL
       uses: actions/upload-artifact@v4
