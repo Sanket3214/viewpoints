@@ -20,7 +20,7 @@ jobs:
       run: dir -Recurse
 
     - name: Build
-      run: dotnet build **/*.csproj --configuration Release
+      run: dotnet build ViewpointRenamePlugin-main/*.csproj --configuration Release
 
     - name: Upload DLL
       uses: actions/upload-artifact@v4
